@@ -12,9 +12,9 @@
 
 /* VARIBLES */
 :root {
-    --width: 80vw;
+    --width: 100vw;
     --min-height: 100vh;
-    --sidebar-width: calc((2/5)*var(--width));
+    --sidebar-width: calc(0.5*var(--width));
     --form-height: calc((2/5)*var(--min-height));
     --section-height: calc(((3/5)*var(--min-height))/2);
 }
@@ -33,7 +33,46 @@
 .sidebar {
     width: var(--sidebar-width);
     height: var(--min-height);
+    position: relative;
 }
+
+.sidebar img {
+    width: 100%;
+    height: 100%;
+}
+
+.photo-credit {
+    position: absolute;
+    bottom: 2rem;
+    left: 25%;
+    font-family: 'child-hood', sans-serif;
+    font-size: 2rem;
+    color:#e74921;
+}
+
+.photo-credit a {
+    color: #e74921;
+}
+
+.logo-text {
+    width: 100%;
+    height: 5rem;
+    background-color: #000;
+    opacity: 0.3;
+    position: absolute;
+    top: 30%;
+}
+
+.logo-text p {
+    font-family: 'child-hood', sans-serif;
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.5rem;
+    font-style: italic;
+    padding-top: 1rem;
+}
+
 
 .hero {
     height: var(--section-height);
