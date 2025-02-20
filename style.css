@@ -17,6 +17,7 @@
     --sidebar-width: calc((3/7)*var(--width));
     --form-height: calc((2/5)*var(--min-height));
     --section-height: calc(((3/5)*var(--min-height))/2);
+    --margin-left: 3.5rem;
 }
 
 body {
@@ -50,7 +51,7 @@ body {
     left: 25%;
     font-family: 'child-hood', sans-serif;
     font-size: 2rem;
-    color:#e74921;
+    color: #e74921;
 }
 
 .photo-credit a {
@@ -93,8 +94,9 @@ body {
 .hero p {
     font-size: 1.5rem;
     padding: 1rem 0;
-    margin-left: 2rem;
+    margin-left: var(--margin-left);
     font-style: normal;
+    margin-right: var(--margin-left);
 }
 
 .hero p:last-child {
@@ -102,19 +104,20 @@ body {
 }
 
 .content {
-    background-color: #ddefef;
+    background-color: #f0ffff;
     width: calc(var(--width) - var(--sidebar-width));
 }
 
 form {
     height: var(--form-height);
-    background-color: #f0ffff;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px #777;
 }
 
 form h3 {
     font-size: 1.5rem;
     padding: 1rem 0;
-    margin-left: 2rem;
+    margin-left: var(--margin-left);
 }
 
 .form-content {
@@ -127,23 +130,61 @@ label {
     font-size: 0.8rem;
 }
 
-input, label {
-    margin-left: 2rem;
+input,
+label {
+    margin-left: var(--margin-left);
 }
 
 input {
     width: 300px;
-    font-size: 1rem;
+    /* font-size: 1.2rem; */
     display: block;
     margin-bottom: 1rem;
     margin-right: 2rem;
     margin-top: 0.2rem;
+    padding: 0.3rem;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #95dcdc;
+    box-shadow: 0.5px 0.5px 2px #555;
 }
 
 button {
-    margin-left: 2rem;
+    margin-left: var(--margin-left);
+    width: 150px;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    border: 1px solid #95dcdc;
+    background-color: #95dcdc;
+    box-shadow: 0 0.5px 1px #555;
+}
+
+button:hover,
+button:focus {
+    cursor: pointer;
+    background-color: #95dcdcc8;
+}
+
+button:active {
+    text-shadow: 0.5px 0 #000;
 }
 
 .content>section:last-child {
     height: var(--section-height);
+}
+
+.sign-in {
+    margin-left: var(--margin-left);
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.sign-in a {
+    color: #349b9b;
+    font-weight: bold;
 }
