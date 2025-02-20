@@ -125,6 +125,10 @@ form h3 {
     flex-wrap: wrap;
 }
 
+.form-content > div {
+    position: relative;
+}
+
 label {
     text-transform: uppercase;
     font-size: 0.8rem;
@@ -155,12 +159,25 @@ input:focus {
     box-shadow: 0.5px 0.5px 2px #555;
 }
 
+.error-message {
+    position: absolute;
+    font-size: 0.8rem;
+    left: var(--margin-left);
+    bottom: 0.1em;
+    visibility: hidden;
+}
+
 input:user-invalid {
     border: 1px solid red;
 }
 
 input:user-valid {
     border: 1px solid #4fe878;
+}
+
+input:user-invalid ~ .error-message {
+    visibility: visible;
+    color: red;
 }
 
 button {
