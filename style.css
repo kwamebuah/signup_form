@@ -85,11 +85,25 @@ body {
     letter-spacing: 1ch;
     font-style: italic;
     text-align: center;
+    margin-top: 1rem;
 }
+
+
 
 .hero p {
     font-size: 1.5rem;
-    padding: 1rem;
+    padding: 1rem 0;
+    margin-left: 2rem;
+    font-style: normal;
+}
+
+.hero p:last-child {
+    font-style: italic;
+}
+
+.content {
+    background-color: #ddefef;
+    width: calc(var(--width) - var(--sidebar-width));
 }
 
 form {
@@ -99,15 +113,35 @@ form {
 
 form h3 {
     font-size: 1.5rem;
-    padding: 1rem;
+    padding: 1rem 0;
+    margin-left: 2rem;
+}
+
+.form-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+input, label {
+    margin-left: 2rem;
 }
 
 input {
-    width: 200px;
+    width: 300px;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+    margin-top: 0.2rem;
 }
 
-.content {
-    background-color: #ddefef;
+button {
+    margin-left: 2rem;
 }
 
 .content>section:last-child {
