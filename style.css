@@ -202,7 +202,7 @@ button:active {
     text-shadow: 0.5px 0 #000;
 }
 
-.content>section:last-child {
+footer {
     height: var(--section-height);
 }
 
