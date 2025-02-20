@@ -130,6 +130,10 @@ label {
     font-size: 0.8rem;
 }
 
+label span {
+    color: red;
+}
+
 input,
 label {
     margin-left: var(--margin-left);
@@ -149,6 +153,14 @@ input:focus {
     outline: none;
     border: 1px solid #95dcdc;
     box-shadow: 0.5px 0.5px 2px #555;
+}
+
+input:user-invalid {
+    border: 1px solid red;
+}
+
+input:user-valid {
+    border: 1px solid #4fe878;
 }
 
 button {
